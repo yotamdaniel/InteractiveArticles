@@ -1,0 +1,20 @@
+<!doctype html>
+<div>
+    <h1>Generated article for {{ book['book'] }} </h1>
+    {% for key, value in article.items() %}
+    <p>
+    <div title="{{questions[key]}}">
+        <div name="paragraphTitle">{{ key }}</div>
+        <a href={{ url_for('.more', title=key ) }} style=" white-space: pre-wrap;">
+            {{ value }}</a>
+    </div>
+    <p>
+
+        {% endfor %}
+</div>
+
+
+<!-- <div>
+    <h1>Generated Questions for {{ book['book'] }} </h1>
+    <p style="white-space: pre-wrap;">{{ questions }}</p>
+</div> -->
